@@ -6,7 +6,7 @@ namespace ModernStore.Infra.COntext
 {
     public class ModernStoreDataContext : DbContext
     {
-        public ModernStoreDataContext() : base(Runtime.ConnectionString)
+        public ModernStoreDataContext() : base(@"connectionstring")
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;

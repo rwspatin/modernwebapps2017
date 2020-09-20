@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using ModernStore.Api.Security;
+using ModernStore.Domain.Commands;
 using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModernStore.Infra.Transactions;
@@ -15,6 +16,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
 
 namespace ModernStore.Api.Controllers
@@ -81,7 +83,7 @@ namespace ModernStore.Api.Controllers
                     id = _customer.Id,
                     name = _customer.Name.ToString(),
                     email = _customer.Email.Address,
-                    username = _customer.User.UserName
+                    username = _customer.User.Username
                 }
             };
 

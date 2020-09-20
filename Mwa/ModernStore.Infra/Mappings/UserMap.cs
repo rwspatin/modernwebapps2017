@@ -9,7 +9,7 @@ namespace ModernStore.Infra.Mappings
         {
             ToTable("User");
             HasKey(x => x.Id);
-            Property(x => x.UserName).IsRequired().HasMaxLength(20);
+            Property(x => x.Username).IsRequired().HasMaxLength(20);
             Property(x => x.Password).IsRequired().HasMaxLength(32).IsFixedLength();
             Property(x => x.Active);
         }
